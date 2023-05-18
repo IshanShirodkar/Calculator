@@ -1,1 +1,144 @@
 
+body {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #333333;
+}
+
+#main {
+    width: 400px;
+    height: 600px;
+    border-radius: 5px;
+    background-color: #333333;
+    box-shadow: 5px 5px 10px #2b2b2b,
+                -5px -5px 10px #3b3b3b;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media screen and (max-width: 1024px) {
+    #main {
+        width: 95vw;
+        height: 97vh;
+    }
+    #buttons button {
+        margin-top: 20px;
+        width: 70px !important;
+        height: 70px !important;
+        font-size: 1.3rem !important;
+    }
+    #buttons .numbers-0 {
+        width: 130px !important;
+    }
+    #field {
+        position: absolute;
+        top: -15px;
+    }
+}
+
+#screen {
+    width: 96%;
+    font-size: 1.8rem;
+    padding: 50px;
+    padding-right: -50px;
+    height: 18%;
+    box-shadow: inset 5px 5px 10px #2b2b2b,
+    inset -5px -5px 10px #3b3b3b;
+    position: relative;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+}
+
+#field {
+    position: relative;
+    bottom: 25%;
+    right: -40px;
+    text-align: right;
+    color:#ffae00;
+}
+
+#field-sign {
+    color: #ffae00;
+    font-size: 1rem;
+    position: absolute;
+    right: 5px;
+    bottom: 60%;
+    transform: translate(-50%);
+}
+
+#buttons {
+    padding: 5px;
+    width: 96%;
+    height: 78%;
+    margin-top: 10px;
+    position: relative;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5px;
+    justify-items: center;
+}
+
+#buttons button {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    outline: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    background-color: #333333;
+    box-shadow: 5px 5px 10px #2b2b2b,
+    -5px -5px 10px #3b3b3b;
+}
+
+#buttons button:active {
+    box-shadow: inset 5px 5px 10px #2b2b2b,
+    inset -5px -5px 10px #3b3b3b;
+    font-size: 1.4rem;
+}
+
+.white {
+    color: #e6e6e6;
+}
+
+.orange {
+    color:#ffae00;
+}
+
+.side-column-2 {
+    grid-row:2/3;
+    grid-column: 4/5;
+}
+
+.side-column-3 {
+    grid-row: 3/4;
+    grid-column: 4/5;
+}
+.side-column-4 {
+    grid-row: 4 / 5;
+    grid-column: 4 / 5;
+}
+.side-column-5 {
+    grid-row: 5 / 6;
+    grid-column: 4 / 5;
+}
+.numbers-0 {
+    grid-row: 5 / 6;
+    grid-column: 1 / 3;
+}
+.box {
+    box-sizing: border-box;
+}
